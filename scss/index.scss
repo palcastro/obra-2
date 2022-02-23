@@ -1,0 +1,178 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, change you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+// @import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+
+// Customize some defaults
+$body-color: #333;
+$body-bg: #fff;
+$border-radius: .4rem;
+$success: #7952b3;
+
+// Required
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+
+@import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/nav";
+// @import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas"; // Requires transitions
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+// @import "helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+
+//
+// Custom styles
+//
+
+@import "icon-list";
+
+
+
+// Style Bootstrap icons
+.bi {
+  fill: currentColor;
+}
+
+
+
+
+
+
+// PERSOAS
+/* CLASES DE LA ESTRUCTURA DE PESTAÑAS, DEBEN MANTENERSE
+t-container = caja div -> ESTILO MODIFICABLE
+t-tabs y t-contents = lista ul -> COMPROBAR SI SE PUEDE
+t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
+
+.t-container {
+  margin: 0 auto;
+  padding: 0 2em;
+}
+.t-tabs, .t-contents {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 2% 0 2%;
+  box-sizing: border-box;
+}
+.t-tabs li {
+  /* color: #dedede; */
+  color: #fffefe;
+  padding: 0.5em 0.7em;
+  text-decoration: none;
+  float: left;
+  text-align: center;
+  font-size: 1.1em;
+  /* background: #717171; */
+  background: #7a7a7a;
+  border-bottom: 0;
+  min-width: 40px;
+  margin-right: 2px;
+  margin-bottom: 0 !important;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.t-tabs li:hover {
+  /* background-color: #545454; */
+  background-color: #b3b3b3;
+  color: #d2d2d2;
+}
+.t-tabs li.selected {
+  /* color: #458ace; */
+  color: #ee2222;
+  cursor: default;
+  /* background: #333; */
+  background: #7a7a7a;
+}
+.t-contents {
+  padding: 0 !important
+}
+.t-content {
+  padding: 0 1em;
+  /* background-color: #333; */
+  background-color: #d2d2d2;
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  /* color: #b7b7b7; */
+  line-height: 1.3em;
+  text-align: justify;
+  z-index: 1;
+  position: relative;
+  max-height: 0;
+  transition: max-height 0.5s ease 0s;
+  overflow: hidden;
+}
+.t-content.selected {
+  max-height: 3000px;
+  transition: max-height 1.25s ease 0.5s;
+}
+/* los colores comentados son los originales del creador, los que quedan ativos son los que fui probando */
+
+/* AÑADIDO POR VER */
+.t-content p{
+  margin-top: 25px;
+}
+
+// CIERRE-PERSOAS
+
