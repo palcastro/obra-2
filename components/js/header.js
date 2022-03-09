@@ -1,42 +1,23 @@
-const headerTemplate = document.createElement("template");
+class Header extends HTMLElement {
+  constructor() {
+    super();
+  }
 
-headerTemplate.innerHTML = `
-
-<link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  connectedCallback() {
+      this.innerHTML = `
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
-header{
-  background: rgb(217,64,54);
-  background: linear-gradient(180deg, rgba(217,64,54,1) 0%, rgba(184,18,7,1) 55%, rgba(158,18,9,1) 100%);
+.buscador{
+  margin-right: 30px;
 }
 
-.link-2{
-  font-family: 'Nunito', sans-serif;
-  color:#ffffff;
-  font-size:16px;
-  margin-right:4rem;
-
+.nav-item+:hover{
+  text-decoration:underline;
 }
-
-.link-2:hover {
-  transform: scale(1.1);
-  color:#ffffff;
-  text-decoration: underline;
-}
-
-@keyframes link-2 {
-  0% { box-shadow: 0 0 0 0 var(--hover); }
-}
-
-.form-control{
-  height:1.7em;
-}
-
 
 </style>
-      <header class="p-1 mb-3 border-bottom bloque" >
 
+<<<<<<< Updated upstream
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
@@ -66,19 +47,61 @@ header{
               <li><a class="dropdown-item" href="#">Saírt</a></li>
             </ul>
           </div>
+=======
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary" >
+      <div class="container-fluid">
+      <a class="navbar-brand mx-4" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+    </svg></a>
+
+
+    
+        <div class="collapse navbar-collapse " id="navbarColor01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.php">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/citas/index.php">CITAS</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/persoas/index.php">PERSOAS</a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/empresas/index.php">EMPRESAS</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/login/logout.php">SAÍR</a>
+            </li>
+          </ul>
+         </div>
+        <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST">
+        <div class="input-group">
+        <input class="form-control border rounded-start" type="text" placeholder="..." id="example-search-input">
+        <span class="input-group-append">
+            <button  class="btn btn-secondary rounded-0 rounded-end buscador" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17"  class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>
+            </button>
+        </span>
+ </div>
+        </form>
+      
+>>>>>>> Stashed changes
         </div>
       </div>
-    </header>
+    </nav>
+
       `;
-class Header extends HTMLElement {
-  constructor() {
-    super();
+    }
   }
-
-  connectedCallback() {
-    const shadowRoot = this.attachShadow({ mode: "closed" });
-
-    shadowRoot.appendChild(headerTemplate.content);
-  }
+<<<<<<< Updated upstream
 }
 customElements.define("header-component", Header);
+=======
+  
+  customElements.define('header-component', Header);
+>>>>>>> Stashed changes

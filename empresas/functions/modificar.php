@@ -1,22 +1,20 @@
-<<<<<<< Updated upstream
-=======
 <?php
 require '../../conexion/conexion.php';
 require '../../conexion/sesion.php';
-?>
 
+$id = $_GET['id'];
+
+$sql = "SELECT * FROM empresas WHERE id = '$id'";
+$resultado = $mysqli->query($sql);
+$row = $resultado->fetch_array(MYSQLI_ASSOC);
+
+?>
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova Empresa</title>
-  <!-- CND de bootstrap -> cambiar cuando toque -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-  <!-- ESTILOS DE LAS PESTAÑAS Y SU CONTENIDO -> MODIFICAR CON BOOTSTRAP O LO QUE SEA -->
-  <!-- <link rel="stylesheet" href="../../tabs.css"> -->
+  <title>Nueva Empresa</title>
   <link rel="stylesheet" href="../../assets/css/index.css">
   <script src="../../components/js/header.js"></script>
   <script src="../../components/js/footer.js"></script>
@@ -27,15 +25,13 @@ require '../../conexion/sesion.php';
   <!-- header -->
   <header-component></header-component>
 
-  <!-- <div class="container"> -->
   <!-- ESTRUCTURA PARA TENER VARIAS PESTAÑAS DINÁMICAS EN UNA MISMA PÁGINA -->
-  <h2 class="my-4 text-center text-primary">Novo rexistro de empresa</h2>
+  <h2 class="my-4 text-center text-primary">Modificar Empresa</h2>
 
   <div class="t-container">
 
     <ul class="t-tabs">
       <li class="t-tab">Datos Empresa</li>
-      <li class="t-tab">Seguimento</li>
       <li class="t-tab">Ofertas de Formación</li>
       <li class="t-tab">Ofertas de Contratación</li>
     </ul>
@@ -43,60 +39,63 @@ require '../../conexion/sesion.php';
     <ul class="t-contents">
 
       <li class="t-content">
-               <form class="row g-3 mt-4" method="POST" action="guardar.php" autocomplete="off">
-        <div class="col-md-4">
+        <form class="row g-3 mt-4" method="POST" action="update.php" autocomplete="off">
+
+          <div class="col-md-4">
             <label for="nome" class="control-label">NOME:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="nombre" name="nome" placeholder="Nome" required>
+              <input type="text" class="form-control" id="nombre" name="nome" placeholder="Nome" value="<?php echo $row['nome']; ?>" required>
             </div>
           </div>
+
+          <input type="hidden" id="id" name="id" value="<?php echo $row['id']; ?>" />
 
           <div class="col-md-4">
             <label for="poboacion" class="ontrol-label">LOCALIDADE:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="localidade" name="localidade" placeholder="Localidade..." required>
+              <input type="text" class="form-control" id="localidade" name="localidade" placeholder="Localidade..." value="<?php echo $row['localidade']; ?>" required>
             </div>
           </div>
 
           <div class="col-md-4">
             <label for="poboacion" class="ontrol-label">POBOACIÓN:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="poboacion" name="poboacion" placeholder="Poboacion" required>
+              <input type="text" class="form-control" id="poboacion" name="poboacion" placeholder="Poboacion" value="<?php echo $row['poboacion']; ?>" required>
             </div>
           </div>
 
           <div class="col-md-4">
             <label for="actividade" class="control-label">ACTIVIDADE:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="actividade" name="actividade" placeholder="Actividade" required>
+              <input type="text" class="form-control" id="actividade" name="actividade" placeholder="Actividade" value="<?php echo $row['actividade']; ?>" required>
             </div>
           </div>
 
           <div class="col-md-4">
-            <label for="telefono" class="control-label">TELEFÓNO:</label>
+            <label for="telefono" class="control-label">TELÉFONO:</label>
             <div class="col-sm-10">
-              <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" maxlength="9" required>
+              <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" maxlength="9" value="<?php echo $row['telefono']; ?>" required>
             </div>
           </div>
 
           <div class="col-md-4">
             <label for="telefono" class="control-label">FAX:</label>
             <div class="col-sm-10">
-              <input type="tel" class="form-control" id="fax" name="fax" placeholder="Número de Fax" maxlength="9">
+              <input type="tel" class="form-control" id="fax" name="fax" placeholder="Número de Fax" value="<?php echo $row['fax']; ?>" maxlength="9">
             </div>
           </div>
 
           <div class="col-md-4">
             <label for="data_alta" class="control-label">DATA DE ALTA:</label>
             <div class="col-sm-10">
-              <input type="date" class="form-control" id="email" name="data_incorporacion" placeholder="dd-mm-aa" required>
+              <input type="date" class="form-control" id="email" name="data_incorporacion" placeholder="dd-mm-aa" value="<?php echo $row['data_incorporacion']; ?>" required>
             </div>
           </div>
 
           <div class="col-md-4">
             <label for="poboacion" class="ontrol-label">PERSOA DE CONTACTO:</label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="persoa_contacto" name="persoa_contacto" placeholder="" required>
+              <input type="text" class="form-control" id="persoa_contacto" name="persoa_contacto" placeholder="" value="<?php echo $row['persoa_contacto']; ?>" required>
             </div>
           </div>
 
@@ -114,19 +113,19 @@ require '../../conexion/sesion.php';
           <div class="col-md-4">
             <label for="ofertas_emprego" class="control-label">OFERTAS DE EMPREGO:</label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" id="email" name="ofertas_contratacion" placeholder="Ofertas emprego" required>
+              <input type="number" class="form-control" id="email" name="ofertas_contratacion" placeholder="Ofertas emprego" value="<?php echo $row['ofertas_contratacion']; ?>" required>
             </div>
           </div>
 
           <div class="col-md-4">
             <label for="ofertas_formacion" class="control-label">OFERTAS DE FORMACIÓN:</label>
             <div class="col-sm-10">
-              <input type="number" class="form-control" id="email" name="ofertas_formacion" placeholder="Ofertas formacion" required>
+              <input type="number" class="form-control" id="email" name="ofertas_formacion" placeholder="Ofertas formacion" value="<?php echo $row['ofertas_formacion']; ?>" required>
             </div>
           </div>
 
           <div>
-            <strong><label for="relacion-conselleria" class="control-label">RELACIÓNS COA CONSELLERÍA:</label></strong>
+            <strong><label for="relacion-conselleria" class="control-label">RELACIÓNS COA CONCELLERÍA:</label></strong>
           </div>
           <div>
             <div class="form-check form-check-inline col-2">
@@ -186,8 +185,8 @@ require '../../conexion/sesion.php';
             <textarea class="form-control" id="notas" name="notas" rows="3"></textarea>
           </div>
 
-          <div>
-            <div class="my-4">
+          <div class="my-4">
+            <div class="col-sm-offset-2 col-sm-10">
               <a href="../index.php" class="btn btn-default">VOLVER</a>
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
@@ -207,7 +206,7 @@ require '../../conexion/sesion.php';
             </div>
         <!-- BOTON MODAL QUE SE ABRE AL PULSAR EL NUEVO SEGUIMIENTO -->
         <div class="my-4">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Novo Seguimento</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Novo Seguimento</button>
         </div>
       </li>
       <li class="t-content">
@@ -225,7 +224,6 @@ require '../../conexion/sesion.php';
 
     </ul>
   </div>
-  <!-- </div> -->
 
   <!-- footer -->
   <footer-component></footer-component>
@@ -239,21 +237,21 @@ require '../../conexion/sesion.php';
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Novo Seguimento</h5>
+        <h5 class="modal-title" id="exampleModalLabel">NOVO SEGUIMENTO</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form method="POST" action="guardar.php" autocomplete="off">
+        <form method="POST" action="update.php" autocomplete="off">
 
           <div class="mb-3">
-            <label for="data_alta" class="control-label">Data de alta:</label>
+            <label for="data_alta" class="control-label">DATA ALTA:</label>
             <div class="col-sm-10">
               <input type="date" class="form-control" id="data_modal" name="data_incorporacion_modal" placeholder="dd-mm-aa" required>
             </div>
           </div>
 
           <div class="mb-3">
-            <label for="orientador" class="control-label">Orientador/a</label>
+            <label for="orientador" class="control-label">ORIENTADOR/A:</label>
             <div class="col-sm-10">
               <select class="form-control" id="orientador_modal" name="orientador_modal">
                 <option value="">Cea Rodríguez, Alberte</option>
@@ -265,7 +263,7 @@ require '../../conexion/sesion.php';
 
           <div class="form-floating">
             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-            <label for="floatingTextarea">Anotacións</label>
+            <label for="floatingTextarea">ANOTACIÓNS:</label>
           </div>
 
           <div class="form-check form-check-inline">
@@ -288,4 +286,3 @@ require '../../conexion/sesion.php';
 </div>
 
 </html>
->>>>>>> Stashed changes
