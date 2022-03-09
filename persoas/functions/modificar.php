@@ -18,30 +18,17 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modificar Persoa</title>
   <!-- esto no sirve no? -->
-<<<<<<< Updated upstream
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!-- CND de bootstrap -> cambiar cuando toque -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <!-- ESTILOS DE LAS PESTAÑAS Y SU CONTENIDO -> MODIFICAR CON BOOTSTRAP O LO QUE SEA -->
-  <link rel="stylesheet" href="../../tabs.css">
-=======
   <link rel="stylesheet" href="/assets/css/index.css">
   <script src="/components/js/header.js"></script>
     <script src="/components/js/footer.js"></script>
->>>>>>> Stashed changes
 </head>
 
 <body>
 
-<<<<<<< Updated upstream
-  <!-- ESTRUCTURA PARA TENER VARIAS PESTAÑAS DINÁMICAS EN UNA MISMA PÁGINA -->
-  <h2 style="text-align:center">Prueba de lo que se abriría al clicar "Modificar Rexistro" de Persoas</h2><br>
-=======
 <header-component></header-component>
 
   <!-- ESTRUCTURA PARA TENER VARIAS PESTAÑAS DINÁMICAS EN UNA MISMA PÁGINA -->
   <h2 class="text-center my-4 text-primary">Modificar datos da persoa</h2>
->>>>>>> Stashed changes
 
   <div class="t-container">
 
@@ -51,25 +38,15 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
       <li class="t-tab">Experiencia</li>
       <li class="t-tab">Acciones</li>
       <li class="t-tab">Ofertas</li>
-<<<<<<< Updated upstream
-      <li class="t-tab"><a href="../../login/logout.php">Saír da sesión</a></li>
-=======
->>>>>>> Stashed changes
     </ul>
 
     <ul class="t-contents">
 
       <li class="t-content">
         <!-- <p>Contenido Datos</p> -->
-<<<<<<< Updated upstream
-        <h3 class="p-5 text-center">MODIFICAR REXISTRO - DATOS</h3>
-
-        <form class="row g-3" method="POST" action="update.php" autocomplete="off">
-=======
 
 
         <form class="row g-3 mt-4" method="POST" action="update.php" autocomplete="off">
->>>>>>> Stashed changes
           <div class="col-md-4">
             <label for="nome" class=" control-label">NOME:</label>
             <div class="col-sm-10">
@@ -150,13 +127,9 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
       <li class="t-content">
         <!-- <p>Contenido Formación</p> -->
-<<<<<<< Updated upstream
-        <h3 class="p-5 text-center">MODIFICAR REXISTRO - FORMACIÓN</h3>
-=======
 
->>>>>>> Stashed changes
 
-        <form class="row g-3" method="POST" action="update.php" autocomplete="off">
+        <form class="row g-3 mt-4" method="POST" action="update.php" autocomplete="off">
 
           <div class="col-md-4">
             <label for="estudo" class="control-label">ESTUDOS BÁSICOS:</label>
@@ -277,11 +250,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
           </div>
 
           <div class="form-group">
-<<<<<<< Updated upstream
-            <label for="exampleFormControlTextarea">Notas e consideracións</label>
-=======
             <label for="exampleFormControlTextarea">NOTAS E CONSIDERACIÓNS:</label>
->>>>>>> Stashed changes
             <textarea class="form-control" id="exampleFormControlTextarea" rows="3"></textarea>
           </div>
 
@@ -296,13 +265,9 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
       <li class="t-content">
         <!-- <p>Contenido Experiencia</p> -->
-<<<<<<< Updated upstream
-        <h3 class="p-5 text-center">MODIFICAR REXISTRO - EXPERIENCIA</h3>
-=======
 
->>>>>>> Stashed changes
 
-        <form class="row g-3" method="POST" action="update.php" autocomplete="off">
+        <form class="row g-3 mt-4" method="POST" action="update.php" autocomplete="off">
           <div class="col-md-4">
             <label for="ano_comezo" class="control-label">ANO DE COMEZO:</label>
             <div class="col-sm-10">
@@ -335,13 +300,9 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
       <li class="t-content">
         <!-- <p>Contenido Acciones</p> -->
-<<<<<<< Updated upstream
-        <h3 class="p-5 text-center">MODIFICAR REXISTRO - ACCIÓNS</h3>
-=======
 
->>>>>>> Stashed changes
 
-        <form class="row g-3" method="POST" action="update.php" autocomplete="off">
+        <form class="row g-3 mt-4" method="POST" action="update.php" autocomplete="off">
 
           <div class="col-md-4">
             <label for="data_nacemento" class="control-label">DATA DA 1ª ENTREVISTA:</label>
@@ -391,11 +352,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
           </div>
 
           <div class="form-group">
-<<<<<<< Updated upstream
-            <label for="exampleFormControlTextarea1">Notas e consideracións</label>
-=======
             <label for="exampleFormControlTextarea1">NOTAS E CONSIDERACIÓNS</label>
->>>>>>> Stashed changes
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
 
@@ -411,13 +368,9 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
       <li class="t-content">
         <!-- <p>Contenido Ofertas</p> -->
-<<<<<<< Updated upstream
-        <h3 class="p-5 text-center">MODIFICAR REXISTRO - OFERTAS</h3>
-=======
 
->>>>>>> Stashed changes
 
-        <form class="row g-3" method="POST" action="update.php" autocomplete="off">
+        <form class="row g-3 mt-4" method="POST" action="update.php" autocomplete="off">
           <div class="col-md-4">
             <label for="ofertade" class="control-label">TIPO DE OFERTA:</label>
             <div class="col-sm-10">

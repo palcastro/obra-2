@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 <?php
 
 require '../../conexion/conexion.php';
@@ -63,4 +61,3 @@ $resultado = $mysqli->query($sql);
 </body>
 
 </html>
->>>>>>> Stashed changes

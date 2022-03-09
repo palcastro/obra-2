@@ -14,35 +14,13 @@ require 'conexion/sesion.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OBRA 2 SOL</title>
   <!-- CND de bootstrap -> cambiar cuando toque -->
-<<<<<<< Updated upstream
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <script type="text/javascript" src="../components/js/header.js"></script>
-  <script type="text/javascript" src="../components/js/footer.js"></script>
-=======
   <script src="/assets/js/bootstrap.bundle.min.js"></script>
   <script src="../components/js/header.js"></script>
   <script src="../components/js/footer.js"></script>
   <link rel="stylesheet" href="/assets/css/index.css">
 
->>>>>>> Stashed changes
 </head>
-<!-- HEADER -->
-<body style="margin-left: 10%;">
-<header-component></header-component>
-  <h1 style="color: red">Welcome to SOL</h1>
-  <br><br>
 
-<<<<<<< Updated upstream
-  <a href="persoas/index.php">Index Persoas</a><br>
-  <a href="persoas/functions/nuevo.php">Novo Rexistro Persoas</a>
-
-  <br><br>
-
-  <a href="empresas/index.php">Index Empresas</a><br>
-  <a href="empresas/functions/nuevo.php">Novo Rexistro Empresas</a>
-
-  <br><br>
-=======
 <body>
   <header-component></header-component>
 
@@ -53,16 +31,9 @@ require 'conexion/sesion.php';
     <div class="p-4 m-2 text-primary">
       <h1>Benvid@ á aplicación do Servizo de Orientación Laboral</h1>
     </div>
->>>>>>> Stashed changes
 
-  <a href="login/logout.php">Saír da sesión</a>
-  <!-- FOOTER -->
+    <div class="card">
 
-<<<<<<< Updated upstream
-  <footer-component></footer-component>
-
-</body>
-=======
       <div class="row">
         <div class="col col-sm-8 d-flex flex-column justify-content-left">
           <img src="./assets/img/cies.jpg" width="650" height="400" alt="cies">
@@ -106,7 +77,6 @@ require 'conexion/sesion.php';
     </div>
   <footer-component></footer-component>
  
->>>>>>> Stashed changes
 
 </body>
 

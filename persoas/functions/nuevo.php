@@ -10,23 +10,6 @@ require '../../conexion/sesion.php';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nova Persoa</title>
-<<<<<<< Updated upstream
-  <!-- esto no sirve no? -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!-- CND de bootstrap -> cambiar cuando toque -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <!-- ESTILOS DE LAS PESTAÑAS Y SU CONTENIDO -> MODIFICAR CON BOOTSTRAP O LO QUE SEA -->
-  <link rel="stylesheet" href="../../tabs.css">
-  <script type="text/javascript" src="/components/js/header.js"></script>
-
-</head>
-
-<body>
-  <!-- HEADER -->
-<header-component></header-component>
-  <!-- ESTRUCTURA PARA TENER VARIAS PESTAÑAS DINÁMICAS EN UNA MISMA PÁGINA -->
-  <h2 style="text-align:center">"Novo Rexistro" de Persoa</h2><br>
-=======
   <link rel="stylesheet" href="../../assets/css/index.css">
     <script src="/components/js/header.js"></script>
   <script src="/components/js/footer.js"></script>
@@ -36,38 +19,24 @@ require '../../conexion/sesion.php';
 <header-component></header-component>
   <!-- ESTRUCTURA PARA TENER VARIAS PESTAÑAS DINÁMICAS EN UNA MISMA PÁGINA -->
   <h2 class="my-4 text-center text-primary">Novo rexistro de persoa</h2>
->>>>>>> Stashed changes
 
   <div class="t-container">
 
     <ul class="t-tabs">
-<<<<<<< Updated upstream
-      <li class="t-tab">Datos Personais</li>
-=======
       <li class="t-tab">Datos Persoais</li>
->>>>>>> Stashed changes
       <li class="t-tab">Formación</li>
       <li class="t-tab">Experiencia</li>
       <li class="t-tab">Accións</li>
       <li class="t-tab">Ofertas</li>
-<<<<<<< Updated upstream
-      <!-- tengo sair aqui mientras no haya header -->
-      <li class="t-tab"><a href="../../login/logout.php">Saír da sesión</a></li>
-=======
       <!-- <li class="t-tab"><a href="../../login/logout.php">Saír da sesión</a></li> -->
->>>>>>> Stashed changes
     </ul>
 
     <ul class="t-contents">
 
       <li class="t-content">
         <!-- <p>Contenido Datos</p> -->
-<<<<<<< Updated upstream
-        <h3 class="p-5 text-center">NOVO REXISTRO - DATOS</h3>
-=======
->>>>>>> Stashed changes
 
-        <form class="row g-3" method="POST" action="guardar.php" autocomplete="off">
+        <form class="row g-3 mt-4" method="POST" action="guardar.php" autocomplete="off">
 
           <div class="col-md-4">
             <label for="nome" class="control-label"> NOME:</label>
@@ -139,13 +108,8 @@ require '../../conexion/sesion.php';
 
 
           <div class="col-md-4">
-<<<<<<< Updated upstream
-            <div class="">
-              <a href="../index.php" class="btn btn-default">VOLTAR</a>
-=======
             <div class="my-4">
               <a href="../index.php" class="btn btn-default">VOLVER</a>
->>>>>>> Stashed changes
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>
@@ -154,13 +118,8 @@ require '../../conexion/sesion.php';
       </li>
 
       <li class="t-content">
-<<<<<<< Updated upstream
-        <!-- <p>Contenido Formación</p> -->
-        <h3 class="p-5 text-center">NOVO REXISTRO - FORMACIÓN</h3>
-=======
->>>>>>> Stashed changes
 
-        <form class="row g-3" method="POST" action="guardar.php" autocomplete="off">
+        <form class="row g-3 mt-4" method="POST" action="guardar.php" autocomplete="off">
 
           <div class="col-md-4">
             <label for="estudo" class="control-label">ESTUDOS BÁSICOS:</label>
@@ -281,22 +240,13 @@ require '../../conexion/sesion.php';
           </div>
 
           <div class="form-group">
-<<<<<<< Updated upstream
-            <label for="exampleFormControlTextarea">Notas e consideracións</label>
-=======
             <label for="exampleFormControlTextarea">NOTAS E CONSIDERACIÓNS:</label>
->>>>>>> Stashed changes
             <textarea class="form-control" id="exampleFormControlTextarea" rows="3"></textarea>
           </div>
 
           <div class="col-md-4">
-<<<<<<< Updated upstream
-            <div class="">
-              <a href="../index.php" class="btn btn-default">VOLTAR</a>
-=======
             <div class="my-4">
               <a href="../index.php" class="btn btn-default">VOLVER</a>
->>>>>>> Stashed changes
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>
@@ -304,13 +254,8 @@ require '../../conexion/sesion.php';
       </li>
 
       <li class="t-content">
-<<<<<<< Updated upstream
-        <!-- <p>Contenido Experiencia</p> -->
-        <h3 class="p-5 text-center">NOVO REXISTRO - EXPERIENCIA</h3>
-=======
->>>>>>> Stashed changes
 
-        <form class="row g-3" method="POST" action="guardar.php" autocomplete="off">
+        <form class="row g-3 mt-4" method="POST" action="guardar.php" autocomplete="off">
           <div class="col-md-4">
             <label for="ano_comezo" class="control-label">ANO DE COMEZO:</label>
             <div class="col-sm-10">
@@ -333,13 +278,8 @@ require '../../conexion/sesion.php';
           </div>
 
           <div class="col-md-4">
-<<<<<<< Updated upstream
-            <div class="">
-              <a href="../index.php" class="btn btn-default">VOLTAR</a>
-=======
             <div class="my-4">
               <a href="../index.php" class="btn btn-default">VOLVER</a>
->>>>>>> Stashed changes
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>
@@ -347,14 +287,7 @@ require '../../conexion/sesion.php';
       </li>
 
       <li class="t-content">
-<<<<<<< Updated upstream
-        <!-- <p>Contenido Acciones</p> -->
-        <h3 class="p-5 text-center">NOVO REXISTRO - ACCIÓNS</h3>
-
-        <form class="row g-3" method="POST" action="guardar.php" autocomplete="off">
-=======
                <form class="row g-3 mt-4" method="POST" action="guardar.php" autocomplete="off">
->>>>>>> Stashed changes
 
           <div class="col-md-4">
             <label for="data_nacemento" class="control-label">DATA DA 1ª ENTREVISTA:</label>
@@ -408,22 +341,13 @@ require '../../conexion/sesion.php';
           </div>
 
           <div class="form-group">
-<<<<<<< Updated upstream
-            <label for="exampleFormControlTextarea1">Notas e consideracións</label>
-=======
             <label for="exampleFormControlTextarea1">NOTAS E CONSIDERACIÓNS:</label>
->>>>>>> Stashed changes
             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
 
           <div class="col-md-4">
-<<<<<<< Updated upstream
-            <div class="">
-              <a href="../index.php" class="btn btn-default">VOLTAR</a>
-=======
             <div class="my-4">
               <a href="../index.php" class="btn btn-default">VOLVER</a>
->>>>>>> Stashed changes
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>
@@ -432,13 +356,8 @@ require '../../conexion/sesion.php';
       </li>
 
       <li class="t-content">
-<<<<<<< Updated upstream
-        <!-- <p>Contenido Ofertas</p> -->
-        <h3 class="p-5 text-center">NOVO REXISTRO - OFERTAS</h3>
-=======
->>>>>>> Stashed changes
 
-        <form class="row g-3" method="POST" action="guardar.php" autocomplete="off">
+        <form class="row g-3 mt-4" method="POST" action="guardar.php" autocomplete="off">
           <div class="col-md-4">
             <label for="ofertade" class="control-label">TIPO DE OFERTA:</label>
             <div class="col-sm-10">
@@ -487,13 +406,8 @@ require '../../conexion/sesion.php';
           </div>
           
           <div class="col-md-4">
-<<<<<<< Updated upstream
-            <div class="">
-              <a href="../index.php" class="btn btn-default">VOLTAR</a>
-=======
             <div class="my-4">
               <a href="../index.php" class="btn btn-default">VOLVER</a>
->>>>>>> Stashed changes
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>
@@ -501,10 +415,7 @@ require '../../conexion/sesion.php';
         </form>
     </ul>
   </div>
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 
   <footer-component></footer-component>
   <script src="../../tabs.js"></script>

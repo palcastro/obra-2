@@ -1,10 +1,1 @@
-<<<<<<< Updated upstream
 node_modules
-dist
-.cache
-/css
-/js
-/datatables
-=======
-node_modules
->>>>>>> Stashed changes

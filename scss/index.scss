@@ -9,17 +9,12 @@ $primary:#5694DB;
 $secondary:#ffc300;
 $body-color: #333;
 $body-bg: #fff;
-<<<<<<< Updated upstream
-$border-radius: .4rem;
-$success: #7952b3;
-=======
 //$border-radius: .4rem;
 $success: #7952b3;
 $light: #5A7E99;
 
   $border-radius:0rem;
 //  $baseBorderRadius:0;
->>>>>>> Stashed changes
 
 // Required
 @import "bootstrap/scss/functions";
@@ -30,27 +25,19 @@ $light: #5A7E99;
 @import "bootstrap/scss/reboot";
 
 @import "bootstrap/scss/type";
-// @import "bootstrap/scss/images";
+@import "bootstrap/scss/images";
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/forms";
 @import "bootstrap/scss/buttons";
 @import "bootstrap/scss/transitions";
 @import "bootstrap/scss/dropdown";
-<<<<<<< Updated upstream
-// @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
-// @import "bootstrap/scss/card";
-// @import "bootstrap/scss/breadcrumb";
-=======
 @import "bootstrap/scss/button-group";
  @import "bootstrap/scss/nav";
  @import "bootstrap/scss/navbar"; 
  @import "bootstrap/scss/card";
  @import "bootstrap/scss/breadcrumb";
->>>>>>> Stashed changes
 // @import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/pagination";
 // @import "bootstrap/scss/badge";
@@ -87,14 +74,6 @@ $light: #5A7E99;
   fill: currentColor;
 }
 
-<<<<<<< Updated upstream
-
-
-
-
-
-// PERSOAS
-=======
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Montserrat&display=swap');
 
 *{
@@ -150,7 +129,6 @@ height: 80px;
 
 //PESTAÑAS SUBSECCIONES
 
->>>>>>> Stashed changes
 /* CLASES DE LA ESTRUCTURA DE PESTAÑAS, DEBEN MANTENERSE
 t-container = caja div -> ESTILO MODIFICABLE
 t-tabs y t-contents = lista ul -> COMPROBAR SI SE PUEDE
@@ -173,24 +151,15 @@ t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
   box-sizing: border-box;
 }
 .t-tabs li {
-<<<<<<< Updated upstream
-  /* color: #dedede; */
-=======
   
->>>>>>> Stashed changes
   color: #fffefe;
   padding: 0.5em 0.7em;
   text-decoration: none;
   float: left;
   text-align: center;
   font-size: 1.1em;
-<<<<<<< Updated upstream
-  /* background: #717171; */
-  background: #7a7a7a;
-=======
 
   background: rgba(158, 157, 157, 0.933);
->>>>>>> Stashed changes
   border-bottom: 0;
   min-width: 40px;
   margin-right: 2px;
@@ -199,39 +168,17 @@ t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
   cursor: pointer;
 }
 .t-tabs li:hover {
-<<<<<<< Updated upstream
-  /* background-color: #545454; */
-  background-color: #b3b3b3;
-  color: #d2d2d2;
-}
-.t-tabs li.selected {
-  /* color: #458ace; */
-  color: #ee2222;
-  cursor: default;
-  /* background: #333; */
-  background: #7a7a7a;
-=======
   background-color: $secondary;
   
 }
 .t-tabs li.selected {
     cursor: default;
   background: #585858;
->>>>>>> Stashed changes
 }
 .t-contents {
   padding: 0 !important
 }
 .t-content {
-<<<<<<< Updated upstream
-  padding: 0 1em;
-  /* background-color: #333; */
-  background-color: #d2d2d2;
-  box-sizing: border-box;
-  float: left;
-  width: 100%;
-  /* color: #b7b7b7; */
-=======
   
   padding-left: 2%;
   padding-right: 2%;
@@ -239,7 +186,6 @@ t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
   box-sizing: border-box;
   border-radius: 5px;
     width: 100%;
->>>>>>> Stashed changes
   line-height: 1.3em;
   text-align: justify;
   z-index: 1;
@@ -252,20 +198,12 @@ t-tab y t-content = elementos li -> NECESARIOS PARA EL JS */
   max-height: 3000px;
   transition: max-height 1.25s ease 0.5s;
 }
-<<<<<<< Updated upstream
-/* los colores comentados son los originales del creador, los que quedan ativos son los que fui probando */
-=======
->>>>>>> Stashed changes
 
 /* AÑADIDO POR VER */
 .t-content p{
   margin-top: 25px;
 }
 
-<<<<<<< Updated upstream
-// CIERRE-PERSOAS
-
-=======
 #tabla{
   border-bottom: black 1px solid;
 }
@@ -277,4 +215,3 @@ input[placeholder]{
 select[option]{
   font-style: italic;
 }
->>>>>>> Stashed changes

@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 <?php
 require '../conexion/conexion.php';
 require '../conexion/sesion.php';
@@ -61,4 +59,3 @@ require '../conexion/sesion.php';
 
 
 </html>
->>>>>>> Stashed changes
