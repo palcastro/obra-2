@@ -1,6 +1,8 @@
 ## Creación de un nuevo proyecto + Instalación de dependencias
 README.md -> GitNoe
-- Pasos hechos en conjunto con el grupo (laragon/www/):
+
+
+Pasos hechos en conjunto con el grupo (laragon/www/):
 
 - mkdir obra-2
 - cd obra-2
