@@ -13,7 +13,7 @@
 </head>
 <!-- MENU SUPERIOR -->
 <body>
-    
+
 
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -29,11 +29,11 @@
     <!-- LOGIN -->
 
     <div id="login-container" class="form-signin d-flex justify-content-center ">
-        <form action="login.php" method="POST" class="form login">
+        <form action="login.php" method="POST" class="form login h5">
 
 
             <h1 class="h3 mb-3 fw-normal text-center">Inicia sesión</h1>
-            <!-- Usuario --> 
+            <!-- Usuario -->
             <div class="form-floating">
                 <div class="input-group w-100">
                     <span class="input-group-text" id="basic-addon1">
@@ -43,7 +43,7 @@
                     </span>
                     <input name="nome" type="text" class="form-control" placeholder="Usuario" aria-label="Input group example" aria-describedby="basic-addon1">
                 </div>
-            </div> 
+            </div>
             <!-- Contrasinal -->
             <div class="form-floating">
                 <div class="input-group w-100">
@@ -73,7 +73,7 @@
 </main>
 <!-- FOOTER -->
 
-<footer-component></footer-component> 
+<footer-component></footer-component>
 
 
 </body>
