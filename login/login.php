@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../components/js/footer.js"></script>
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/bootstrap-theme.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
     <title>Login de Usuario</title>
 </head>
 <!-- MENU SUPERIOR -->
@@ -71,9 +68,8 @@
 
 
 </main>
-<!-- FOOTER -->
 
-<footer-component></footer-component>
+
 
 
 </body>
@@ -83,6 +79,7 @@ if ($_POST) {
     // session_start();
     require '../conexion/sesion.php';
     require '../conexion/login-conn.php';
+
 
     $_SESSION['usuario'] = "miusuario";
     $_SESSION['estado'] = "conectado";
@@ -104,7 +101,8 @@ if ($_POST) {
         echo "Nome ou clave non válido";
     }
 }
-?>
+//----------------------------FOOTER-----------------------------------------
+include_once '../inc/footer.php';?>
 
 
 </html>

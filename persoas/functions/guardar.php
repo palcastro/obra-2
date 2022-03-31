@@ -25,7 +25,7 @@ $resultado = $mysqli->query($sql);
   <link rel="stylesheet" href="/assets/css/index.css">
 
 </head>
-
+<!-- Caja mensaje -->
 <body>
   <div class="modal modal-sheet position-static d-block bg-secondary d-flex align-items-center" tabindex="-1" role="dialog" id="modalSheet">
     <div class="modal-dialog" role="document">
@@ -51,8 +51,6 @@ $resultado = $mysqli->query($sql);
       </div>
     </div>
   </div>
-
-
 </body>
 
 </html>
