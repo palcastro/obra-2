@@ -11,47 +11,63 @@ $row = $ficha->fetch_array(MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="../../assets/css/index.css">
-  <script src="../../components/js/header.js"></script>
-  <script src="../../components/js/footer.js"></script>-->
-  <title>Ver Ficha</title>
+  <title>Ver rexistro</title>
 </head>
 
 <body>
+<!--Header php-->
+<?php
+include_once '../inc/header.php';
+?>
 
-  <!-- <header-component></header-component> -->
-  <?php
-  include_once '../inc/header.php';
-  ?>
-
-  <main>
-  <h5 class="p-2 success text-center">FICHA DE PERSOA CON ID <?php echo $row['id']; ?></h5>
-
-  <div class="container">
-    <p>Nome e Apelidos: <?php echo $row['nome'], "&nbsp", $row['primeiro_apelido'], "&nbsp", $row['segundo_apelido']; ?></p>
-    <!-- <p>Nome: <?php echo $row['nome']; ?></p>
-    <p>1º Apelido: <?php echo $row['primeiro_apelido']; ?></p>
-    <p>2º Apelido: <?php echo $row['segundo_apelido']; ?></p> -->
-    <p>DNI/NIF: <?php echo $row['nif']; ?></p>
-    <p>Data de nacemento: <?php echo $row['data_nacemento']; ?></p>
-    <p>Sexo: <?php echo $row['sexo']; ?></p>
-    <p>Código Postal: <?php echo $row['codigo_postal']; ?></p>
-    <p>Teléfono: <?php echo $row['telefono']; ?></p>
-    <p>Email: <?php echo $row['email']; ?></p>
+<!--Tabla datos-->
+<main>
+  <div class="container d-flex justify-content-center">
+  <table class="table table-striped table-hover m-5">
+    <thead>
+    <tr>
+      <th>REXISTRO DE PERSOA CON ID <?php echo $row['id']; ?></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th>Nome e apelidos:</th>
+      <td><?php echo $row['nome'], "&nbsp", $row['primeiro_apelido'], "&nbsp", $row['segundo_apelido'] ?></td>
+    </tr>
+    <tr>
+      <th>DNI/NIF:</th>
+      <td><?php echo $row['nif']; ?></td>
+    </tr>
+    <tr>
+      <th>Data de nacemento:</th>
+      <td><?php echo $row['data_nacemento']; ?></td>
+    </tr>
+    <tr>
+      <th>Sexo:</th>
+      <td> <?php echo $row['sexo']; ?></td>
+    </tr>
+    <tr>
+      <th>Código Postal:</th>
+      <td><?php echo $row['codigo_postal']; ?></td>
+    </tr>
+    <tr>
+      <th>Teléfono:</th>
+      <td><?php echo $row['telefono']; ?></td>
+    </tr>
+    <tr>
+      <th>Email:</th>
+      <td><?php echo $row['email']; ?></td>
+    </tr>
+    </tbody>
+  </table>
   </div>
+</main>
 
-  </main>
-
-  <!-- <footer-component></footer-component> -->
-  <?php
-  include_once '../inc/footer.php';
-  ?>
+<!--Footer php-->
+<?php
+include_once '../inc/footer.php';
+?>
 </body>
-
 </html>

@@ -1,6 +1,6 @@
 <?php
-require '../../conexion/conexion.php';
-require '../../conexion/sesion.php';
+require '../conexion/conexion.php';
+require '../conexion/sesion.php';
 ?>
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ require '../../conexion/sesion.php';
 
   <!-- Menú -->
   <?php
-  include_once '../../inc/header.php';
+  include_once '../inc/header.php';
   ?>
 
   <!-- ESTRUCTURA PARA TENER VARIAS PESTAÑAS DINÁMICAS EN UNA MISMA PÁGINA -->
@@ -172,7 +172,7 @@ require '../../conexion/sesion.php';
 
           <div>
             <div class="my-4">
-              <a href="../index.php" class="btn btn-default">VOLVER</a>
+              <a href="index.php" class="btn btn-default">VOLVER</a>
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>
@@ -213,10 +213,10 @@ require '../../conexion/sesion.php';
   </div>
  <!-- Componente footer -->
   <?php
-  include_once '../../inc/footer.php';
+  include_once '../inc/footer.php';
   ?>
 
-  <script src="../../tabs.js"></script>
+  <script src="../tabs.js"></script>
 
 </body>
 

@@ -1,6 +1,6 @@
 <?php
-require '../../conexion/conexion.php';
-require '../../conexion/sesion.php';
+require '../conexion/conexion.php';
+require '../conexion/sesion.php';
 
 $id = $_GET['id'];
 
@@ -14,7 +14,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 <body>
   <!-- Menú -->
   <?php
-  include_once '../../inc/header.php';
+  include_once '../inc/header.php';
   ?>
 
   <!-- ESTRUCTURA PARA TENER VARIAS PESTAÑAS DINÁMICAS EN UNA MISMA PÁGINA -->
@@ -105,7 +105,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
           <div class="col-md-4">
             <div class=" my-4">
-              <a href="../index.php" class="btn btn-default">VOLVER</a>
+              <a href="index.php" class="btn btn-default">VOLVER</a>
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>
@@ -241,7 +241,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
           <div class="col-md-4">
             <div class=" my-4">
-              <a href="../index.php" class="btn btn-default">VOLVER</a>
+              <a href="index.php" class="btn btn-default">VOLVER</a>
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>
@@ -274,7 +274,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
           <div class="col-md-4">
             <div class="my-4">
-              <a href="../index.php" class="btn btn-default">VOLVER</a>
+              <a href="index.php" class="btn btn-default">VOLVER</a>
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>
@@ -338,7 +338,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
           <div class="col-md-4">
             <div class=" my-4">
-              <a href="../index.php" class="btn btn-default">VOLVER</a>
+              <a href="index.php" class="btn btn-default">VOLVER</a>
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>
@@ -398,7 +398,7 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
           <div class="col-md-4">
             <div class=" my-4">
-              <a href="../index.php" class="btn btn-default">VOLVER</a>
+              <a href="index.php" class="btn btn-default">VOLVER</a>
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>
@@ -410,10 +410,10 @@ $row = $resultado->fetch_array(MYSQLI_ASSOC);
 
   <!--Footer-->
   <?php
-  include_once '../../inc/footer.php';
+  include_once '../inc/footer.php';
   ?>
 
-  <script src="../../tabs.js"></script>
+  <script src="../tabs.js"></script>
 </body>
 
 </html>
