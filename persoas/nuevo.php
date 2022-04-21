@@ -4,6 +4,10 @@ require '../conexion/sesion.php';
 ?>
 
 <!DOCTYPE html>
+<html>
+<head>
+  <title>Novo rexistro</title>
+</head>
 <body>
   <!-- Menú -->
   <?php
@@ -98,7 +102,7 @@ require '../conexion/sesion.php';
 
           <div class="col-md-4">
             <div class="my-4">
-              <a href="../index.php" class="btn btn-default">VOLVER</a>
+              <a href="index.php" class="btn btn-default">VOLVER</a>
               <button type="submit" class="btn btn-primary">GARDAR</button>
             </div>
           </div>

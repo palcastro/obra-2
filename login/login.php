@@ -3,30 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/css/index.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/index.css">
     <title>Login de Usuario</title>
 </head>
-<!-- MENU SUPERIOR -->
+
 <body>
+<?php
+include_once '../inc/header-out.php';?>
 
 
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-
-        <div class="collapse navbar-collapse justify-content-md-center" id="navlogin">
-            <h1 id="solh1" class="text-white">Servizo de Orientación Laboral</h1>
-        </div>
-    </nav>
-</header>
 
 <main>
     <!-- LOGIN -->
 
     <div id="login-container" class="form-signin d-flex justify-content-center ">
-        <form action="login.php" method="POST" class="form login h5">
+        <form action="login.php" method="POST" class="form login">
 
 
             <h1 class="h3 mb-3 fw-normal text-center">Inicia sesión</h1>
@@ -64,22 +59,17 @@
         </form>
     </div>
 
-    <!-- --------------------- -->
-
-
 </main>
 
-
-
-
 </body>
+
+
 
 <?php
 if ($_POST) {
     // session_start();
     require '../conexion/sesion.php';
     require '../conexion/login-conn.php';
-
 
     $_SESSION['usuario'] = "miusuario";
     $_SESSION['estado'] = "conectado";
@@ -101,8 +91,10 @@ if ($_POST) {
         echo "Nome ou clave non válido";
     }
 }
-//----------------------------FOOTER-----------------------------------------
-include_once '../inc/footer.php';?>
+
+//Footer
+include_once '../inc/footer.php';
+?>
 
 
 </html>

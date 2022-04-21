@@ -1,3 +1,6 @@
+// CAMBIAMOS IMPORT DE FUENTES A PRIMERA LÍNEA-------------------------
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Montserrat&display=swap');
+
 // Toggle global options
 $enable-gradients: true;
 $enable-shadows: true;
@@ -39,17 +42,20 @@ $border-radius:0rem;
 @import "bootstrap/scss/nav";
 @import "bootstrap/scss/navbar";
 @import "bootstrap/scss/card";
-@import "bootstrap/scss/breadcrumb";
+// ESTE COMENTADO
+//@import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/accordion";
-// @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
+// DESCOMENTAR AQUI---------------------------------------------------------
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
 // @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
 @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/close";
 // @import "bootstrap/scss/toasts";
 @import "bootstrap/scss/modal"; // Requires transitions
-// @import "bootstrap/scss/tooltip";
+// DESCOMENTADO EN OTRO
+@import "bootstrap/scss/tooltip";
 // @import "bootstrap/scss/popover";
 @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
@@ -57,7 +63,8 @@ $border-radius:0rem;
 @import "bootstrap/scss/placeholders";
 // Helpers
 // @import "helpers";
-@import "../node_modules/bootstrap/scss/helpers";
+// MODIFICADO------------------------------
+@import "bootstrap/scss/helpers";
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
@@ -77,7 +84,6 @@ $border-radius:0rem;
 }
 
 // ----------------------------------FUENTES ENCABEZADO Y CONTENIDOS-------------------------------------
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&family=Montserrat&display=swap');
 
 * {
   font-family: 'Montserrat', sans-serif;
@@ -147,6 +153,55 @@ h2 {
 
 // -----------------------------------------FIN HEADER LOGIN---------------------------------------------------------
 
+// ------------------------------------------PRUEBA HAMBURGUESA--------------------------------------------------------
+
+.container-fluid02 {
+  z-index: 5;
+  width: 100%;
+  padding: 1%;
+}
+
+.navbar-expand-lg {
+  height: 5%;
+  padding-bottom: 2%;
+  z-index: 5;
+}
+
+// ICONO HAMBURGUESA
+.navbar-dark .navbar-toggler {
+  border: 0;
+  float: right;
+}
+
+/*  enlaces inicio */
+.inicio {
+  background-color: $secondary;
+  width: 100%;
+  min-width: 100%;
+}
+
+.inicio a:hover {
+  background-color: $secondary;
+  width: 100%;
+  min-width: 100%;
+}
+
+
+// BUSCADOR BOTON NAVEGADOR HEADER- VERSION ISMAEL
+/* formulario busca top */
+#basic-addon2>button,
+#basic-addon2>.input-group-text {
+  border: 0;
+  background-color: $secondary
+}
+
+#basic-addon2>button:hover {
+  border: 0;
+  background-color: $warning
+}
+
+
+// ------------------------ FIN PRUEBA HAMBURGUESA-----------------------------
 
 
 
